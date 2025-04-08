@@ -452,7 +452,7 @@ void pair_faces_in_tets(const Edge &iso_edge, const std::vector<size_t> &contain
     for (size_t i: containing_tetIds) {
         if (cut_result_index[i] == Arrangement<3>::None) {
             // empty tet i
-            for (size_t fi = 0; fi < 4; ++i) {
+            for (size_t fi = 0; fi < 4; ++fi) {
                 if (identical_tet_planes.find(std::make_pair(i, fi)) != identical_tet_planes.end()) {
                     // face fi lies on a tet boundary incident to iso-edge
                     std::array<size_t, 3> bndry_face_verts;
